@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import {Button, Checkbox, Form, Input} from 'antd';
 import Trending from './components/Trending';
 import LyricsSearch from './components/search/Search';
+import {Link, Route} from 'react-router-dom'
 
 
 
@@ -134,7 +135,29 @@ Trending component
 
  */}
 
-  <Trending></Trending>
+  {/* <Trending></Trending> */}
+
+
+
+
+  <div>
+      <nav className="navbar navbar-light">
+        <ul className="nav navbar-nav">
+          <li>
+            <Link to="/">Trending</Link>
+          </li>
+          <li>
+            <Link to="/lyricSearch">Search</Link>
+          </li>
+          <li>
+          </li>
+        </ul>
+      </nav>
+
+      { /* Route components are rendered if the path prop matches the current URL */}
+      <Route path="/"><Trending /></Route>
+      <Route path="/lyricSearch"><LyricsSearch /></Route>
+    </div>
 
     </div>
   );

@@ -72,6 +72,7 @@ function Trending() {
 
     return (
       <div className="Trending">
+      <p>Trending</p>
         <Select
     showSearch
     placeholder="Select a person"
